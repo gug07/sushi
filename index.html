@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f9f0ff;
+            text-align: center;
+            padding: 50px;
+        }
+        .caixa {
+            background-color: #f3e5f5;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            max-width: 400px;
+        }
+        h1 {
+            color: #6a1b9a;
+            font-size: 28px;
+        }
+        button {
+            background-color: #ba68c8;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            margin: 15px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ab47bc;
+        }
+        .hidden {
+            display: none;
+        }
+        .coracao {
+            font-size: 80px;
+            color: #ff4081;
+            margin-top: 20px;
+            animation: batimento 1s infinite;
+        }
+        @keyframes batimento {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        p {
+            font-size: 20px;
+            color: #8e24aa;
+        }
+        .extra-fofo {
+            font-size: 18px;
+            color: #d81b60;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caixa">
+        <h1>Quer namorar comigo, Yasmin? 😍💜</h1>
+        <button onclick="mostrarMensagem()">Sim 💜</button>
+        <button onclick="mostrarMensagem()">Sim, muito! 💕</button>
+        <p id="resposta" class="hidden">Você é meu sonho realizado! 🌷</p>
+        <div id="coracao" class="hidden coracao">💖💖💖</div>
+        <p id="extraFofo" class="hidden extra-fofo">Seremos o casal mais fofo de todos os tempos! 😘</p>
+    </div>
+
+    <script>
+        function mostrarMensagem() {
+            document.getElementById('resposta').classList.remove('hidden');
+            document.getElementById('coracao').classList.remove('hidden');
+            document.getElementById('extraFofo').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
